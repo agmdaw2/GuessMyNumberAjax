@@ -1,12 +1,15 @@
 <?php
-include_once 'DatabaseOOP.php';
+include_once 'pep/DatabaseOOP.php';
+
     try{
         $conn = new DatabaseOOP("localhost:3306", "root", "admin", "m07uf3");
         $conn->connect();
+
+        //funcion borrar
         $conn->delete($_POST["borrar"]);
 
         //Header para la redireccion
-        header("Location: ./mysql_index.php");
+        header("Location: ./estadisticas.php");
     } catch (Exception $error) {
         echo "connection failed: " . $error->getMessage();
     }

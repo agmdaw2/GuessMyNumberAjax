@@ -25,7 +25,7 @@
         </form>
 
         <?php
-            echo "<a href='credits.php' target='credits.txt' onclick=\"window.open(this.href, this.target, ' width=400, height=300, menubar=no');return false;\"> Creditos </a>";
+            echo "<a href='credits.php' target='credits.txt' onclick=\"window.open(this.href, this.target, ' width=400, height=300');return false;\"> Creditos </a>";
         ?>
     </body>
 </html>

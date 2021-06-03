@@ -30,6 +30,18 @@
         echo "<td>" . $row['nivell'] . "</td>";
         echo "<td>" . $row['data_partida'] . "</td>";
         echo "<td>" . $row['intents'] . "</td>";
+        echo "<td>
+                <form method='POST'>
+                    <input type='hidden' name='encontrar' value='". $row['id'] ."'>
+                    <input type='submit' value='Modificar' formaction='./modificar.php'>
+                </form>
+              </td>";
+        echo "<td>
+                <form method='POST'>
+                    <input type='hidden' name='borrar' value='". $row['id'] ."'>
+                    <input type='submit' value='Borrar' formaction='./borrar.php'>
+                </form>
+              </td>";
         echo "</tr>";
     }
     echo "</table>";

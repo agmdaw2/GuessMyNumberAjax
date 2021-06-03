@@ -38,32 +38,12 @@
     <h1>Estadisticas de GuessMyNumber</h1>
     <h2>Modificacion tabla</h2>
         <div id="modificadores" style="display:none">
-            <form action="./mysql_index.php" method="post">
+            <form action="./estadisticas.php" method="post">
                 <table>
-                    <tr>
-                        <td>Delete:</td>
-                        <td><input type="number" placeholder="id" name="borrar"></td>
-                        <!-- El formaction es igual al submit pero enviando la informacion a otra url -->
-                        <td><input type="submit" value="DO IT!" formaction="./borrar.php"></td>
-                    </tr>
                     <tr>
                         <td>FindById:</td>
                         <td><input type="number" placeholder="id" name="encontrar"></td>
                         <td><input type="submit" value="DO IT!" formaction="./encontrar.php"></td>
-                    </tr>
-                    <tr>
-                        <td>Update:</td>
-                        <td><input type="number" placeholder="id" name="modificar"></td>
-                        <td>
-                            <select name="modalitat">
-                                <option value="HUMA">HUMA</option>
-                                <option value="MAQUINA">MAQUINA</option>
-                            </select>
-                        </td>
-                        <td><input type="number" placeholder="Nivell" name="nivell" max="3" min="1"></td>
-                        <td><input type="date" placeholder="Data" name="data"></td>
-                        <td><input type="number" placeholder="Intents" name="intents" min="1"></td>
-                        <td><input type="submit" value="DO IT!" formaction="./modificar.php"></td>
                     </tr>
                 </table>
             </form>
@@ -105,8 +85,11 @@
         }
         DatabaseProc::TABLE_END
     ?>
-
-    
+    <br>
+    <form name="volver" method="post" action="añadir.php">
+            <input type="submit" value="Añadir uno nuevo">
+    </form>
+    <br>
     <form name="volver" method="post" action="index.php">
             <input type="submit" value="Volver a inicio">
     </form>
